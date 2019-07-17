@@ -1,0 +1,16 @@
+<a href="{% url 'homepg'%}">Start Again</a><br/>
+<a href="{% url 'aboutpg'  %}">About</a>
+<h1>There are {{count}} words in your text</h1>
+<h1>Your Text</h1>
+{{ fulltext }}
+
+<h1>Word Count:</h1>
+{{ SortedWordCount }}
+<br/>
+<br/>
+{% for word,counttotal in SortedWordCount %}
+{{ word }} 
+<br/> 
+{{ counttotal }}
+<br/>
+{% endfor %}
